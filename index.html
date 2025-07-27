@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シェアハウスかすみ荘</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">オープンシェアハウスかすみ荘</h1>
+            <!--<p class="tagline">生活を創ろう。</p>-->
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <div class="hero-content">
+            <!--<h2 class="hero-title">そうだ、<br>京都住もう。</h2>-->
+        </div>
+    </section>
+
+    <!-- シェアハウス紹介 -->
+    <section class="sharehouses">
+        <div class="container">
+            <h2 class="section-title">シェアハウス一覧</h2>
+            
+            <!-- シェアハウス1 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(0)">
+                    <h3>西かすみ荘</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="sharehouse-info">
+                        <div class="sharehouse-image">
+                            <img data-src="./imgs/nishi.jpg" 
+                            data-max-width="400" 
+                            data-quality="0.8"
+                            alt="西かすみ荘"
+                            class="lazy-image">
+                        </div>
+                        <div class="sharehouse-details">
+                            <p>下鴨神社まで徒歩3分の落ち着いた環境。1階が元コンビニの店舗になっていて、なんでもできる。あなたの創造力と行動力が試される。</p>
+                            <ul class="features">
+                                <li>個室数：5室</li>
+                                <li>家賃: 25歳以下3.6万円, 26歳以上4.5万円(+光熱費日用品費折半)</li>
+                                <li>礼金: 25歳以上なし, 26歳以上4.5万円</li>
+                                <li>場所: 京都市左京区下鴨蓼倉町4-4</li>
+                            </ul>
+                            <button class="photo-btn" onclick="openGallery('sakura')">写真を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- シェアハウス2 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(1)">
+                    <h3>南かすみ荘</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="sharehouse-info">
+                        <div class="sharehouse-image">
+                            <img data-src="./imgs/minami.jpg" 
+                           data-max-width="400" 
+                           data-quality="0.8"
+                           alt="南かすみ荘"
+                           class="lazy-image">
+                        </div>
+                        <div class="sharehouse-details">
+                            <p></p>
+                            <ul class="features">
+                                <li>個室数：8室</li>
+                                <li>家賃: 2.7万円(+光熱費日用品費折半)</li>
+                                <li>礼金: 2.7万円</li>
+                                <li>所在地：京都市左京区某所。東山三条駅徒歩6分。</li>
+                            </ul>
+                            <button class="photo-btn" onclick="openGallery('bamboo')">写真を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- シェアハウス3 -->
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(2)">
+                    <h3>一乗寺かすみ荘</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="sharehouse-info">
+                        <div class="sharehouse-image">
+                            <img data-src="./imgs/ichijoji.jpg" 
+                            data-max-width="400" 
+                            data-quality="0.8"
+                            alt="一乗寺かすみ荘"
+                            class="lazy-image">
+                        </div>
+                        <div class="sharehouse-details">
+                            <p>伝統的な日本家屋のシェアハウス。夏は扇風機を浴びながらテレビで甲子園を眺め、冬はこたつでミカンを食べる。そんな生活。</p>
+                            <ul class="features">
+                                <li>個室数：3室</li>
+                                <li>家賃: 3.3万円(+光熱費日用品費折半)
+                                <li>礼金: 3.3万円</li>
+                                <li>所在地：京都市左京区一乗寺某所。百万遍交差点まで徒歩19分。</li>
+                            </ul>
+                            <button class="photo-btn" onclick="openGallery('moon')">写真を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Twitter埋め込み -->
+    <section class="social">
+        <div class="container">
+            <h2 class="section-title">最新情報</h2>
+            <div class="twitter-container">
+                <!-- 実際のTwitterアカウントのURLに置き換えてください -->
+                <a class="twitter-timeline" 
+                   data-height="700" 
+                   data-theme="light" 
+                   href="https://twitter.com/kyoto_share?ref_src=twsrc%5Etfw">
+                   Tweets by your_sharehouse_account
+                </a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- 連絡先 -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-info">
+                <p class="contact-text">ご質問・見学のお申し込みはこちらまで</p>
+                <a href="mailto:kasumisomain@gmail.com" class="email-link">kasumisomain@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 かすみ荘. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 写真ギャラリーモーダル -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-container">
+                <div class="gallery-images" id="gallery-images">
+                    <!-- 写真がここに動的に挿入されます -->
+                </div>
+                <div class="gallery-nav">
+                    <button class="nav-btn" onclick="prevImage()">‹</button>
+                    <button class="nav-btn" onclick="nextImage()">›</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
