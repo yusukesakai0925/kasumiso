@@ -396,6 +396,31 @@ function getPerformanceMetrics() {
     return metrics;
 }
 
+// Twitter ウィジェットの動的読み込み
+function loadTwitterWidget() {
+    // Twitter ウィジェットスクリプトが読み込まれているかチェック
+    if (typeof twttr !== 'undefined') {
+        twttr.widgets.load();
+    } else {
+        // スクリプトを動的に読み込み
+        const script = document.createElement('script');
+        script.src = 'https://platform.twitter.com/widgets.js';
+        script.async = true;
+        script.charset = 'utf-8';
+        document.head.appendChild(script);
+    }
+}
+
+// ページ読み込み時にTwitterウィジェットを初期化
+document.addEventListener('DOMContentLoaded', function() {
+    // 既存の初期化処理...
+    
+    // Twitter ウィジェットの読み込み
+    setTimeout(() => {
+        loadTwitterWidget();
+    }, 1000);
+});
+
 // 開発環境でのみデバッグ情報を表示
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     window.addEventListener('load', function() {
